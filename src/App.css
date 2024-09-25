@@ -1,0 +1,117 @@
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 2rem;
+  background: #fff;
+  color: #0068a5;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.logo {
+  height: 2em;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+
+  button[disabled] {
+    background-color: #999;
+  }
+}
+
+.nav {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.navActive {
+  background: #fff;
+  color: #0068a5;
+}
+
+.body {
+  padding: 20px 40px 40px;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.gridItem {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: relative;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.iconSaved {
+  display: block;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 2px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in;
+}
+
+.iconSavedActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gridPlaceholder {
+  width: 200px;
+  height: 200px;
+  background: rgb(131,58,180,0.5);
+  background: linear-gradient(90deg, rgb(131,58,180,0.7) 0%, rgb(180, 58, 78,0.7) 50%, rgba(131,58,180,0.7) 100%);
+  background-attachment: fixed;
+  background-size: 500px auto;
+  background-repeat: repeat;
+  animation: 1s linear scrollBG infinite;
+}
+
+@keyframes scrollBG {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
