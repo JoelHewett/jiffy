@@ -1,5 +1,6 @@
 import { Gif } from "../types";
 import starIcon from "../assets/star-symbol-icon.svg";
+import { GifItem } from "./GifItem";
 
 export const Grid = ({
   title,
@@ -34,7 +35,7 @@ export const Grid = ({
           src={starIcon}
           alt="Saved"
         />
-        <img src={gif.src} alt={gif.alt} />
+        <GifItem gif={gif} />
       </li>
     ));
   };
